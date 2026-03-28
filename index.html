@@ -1,275 +1,102 @@
-
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-.dash{padding:0 0 2rem;}
-.dash-title{font-size:12px;font-weight:500;color:var(--color-text-secondary);letter-spacing:.08em;text-transform:uppercase;margin-bottom:1.25rem;padding-bottom:.75rem;border-bottom:0.5px solid var(--color-border-tertiary);}
-.sec-label{font-size:11px;font-weight:500;color:var(--color-text-tertiary);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.625rem;}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
-.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:12px;}
-.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;}
-.card-full{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1rem 1.25rem;margin-bottom:12px;}
-.mc{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.875rem 1rem;}
-.mc-label{font-size:12px;color:var(--color-text-secondary);margin-bottom:4px;}
-.mc-val{font-size:22px;font-weight:500;color:var(--color-text-primary);}
-.mc-sub{font-size:11px;color:var(--color-text-tertiary);margin-top:2px;}
-.sr{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:0.5px solid var(--color-border-tertiary);}
-.sr:last-child{border-bottom:none;}
-.sn{font-size:11px;color:var(--color-text-secondary);width:150px;flex-shrink:0;}
-.sbw{flex:1;height:6px;background:var(--color-background-secondary);border-radius:3px;overflow:hidden;}
-.sb{height:100%;border-radius:3px;}
-.sv{font-size:12px;font-weight:500;width:28px;text-align:right;}
-.ls{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:0.5px solid var(--color-border-tertiary);}
-.ls:last-child{border-bottom:none;}
-.ln{width:21px;height:21px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0;margin-top:1px;}
-.lt{font-size:12px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px;}
-.ld{font-size:11px;color:var(--color-text-secondary);line-height:1.5;}
-.vr{display:flex;gap:8px;padding:5px 0;border-bottom:0.5px solid var(--color-border-tertiary);align-items:flex-start;}
-.vr:last-child{border-bottom:none;}
-.vt{font-size:10px;font-weight:500;padding:2px 6px;border-radius:4px;flex-shrink:0;margin-top:1px;}
-.vx{font-size:11px;color:var(--color-text-secondary);line-height:1.5;}
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;}
-.li{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--color-text-secondary);}
-.ld2{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
-.ztabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
-.zt{cursor:pointer;padding:4px 10px;border-radius:var(--border-radius-md);font-size:11px;font-weight:500;border:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);background:transparent;transition:all .15s;}
-.zt.active{background:var(--color-background-info);color:var(--color-text-info);border-color:transparent;}
-.zd{display:none;}
-.zd.active{display:block;}
-.zm{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:0.5px solid var(--color-border-tertiary);font-size:11px;}
-.zm:last-child{border-bottom:none;}
-.zml{color:var(--color-text-secondary);}
-.zmv{font-weight:500;color:var(--color-text-primary);}
-.diff-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;font-size:11px;}
-.dc{padding:6px 8px;border-right:0.5px solid var(--color-border-tertiary);border-bottom:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);line-height:1.4;}
-.dc:last-child{border-right:none;}
-.dch{font-weight:500;font-size:11px;color:var(--color-text-primary);background:var(--color-background-secondary);}
-.dchigh{color:var(--color-text-primary);font-weight:500;}
-.neg-row{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-bottom:0.5px solid var(--color-border-tertiary);}
-.neg-row:last-child{border-bottom:none;}
-.neg-arrow{font-size:13px;flex-shrink:0;margin-top:1px;}
-.neg-text{font-size:11px;color:var(--color-text-secondary);line-height:1.5;}
+.dash{padding:0 0 1.5rem;}
+.title{font-size:11px;font-weight:600;color:var(--color-text-secondary);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;padding-bottom:.6rem;border-bottom:0.5px solid var(--color-border-tertiary);}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:8px;}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px;}
+.g2{display:grid;grid-template-columns:2fr 1fr;gap:8px;}
+.mc{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.7rem 1rem;}
+.mc-l{font-size:10px;color:var(--color-text-tertiary);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px;}
+.mc-v{font-size:22px;font-weight:500;color:var(--color-text-primary);line-height:1;}
+.mc-s{font-size:10px;color:var(--color-text-tertiary);margin-top:3px;}
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:.875rem 1rem;}
+.clabel{font-size:10px;font-weight:600;color:var(--color-text-tertiary);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.75rem;}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
+.li{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--color-text-secondary);}
+.dot{width:7px;height:7px;border-radius:2px;flex-shrink:0;}
 </style>
 
 <div class="dash">
-<div class="dash-title">Amnesia: The Bunker — Разбор игрового дизайна</div>
+<div class="title">Amnesia: The Bunker — Разбор игрового дизайна</div>
 
-<!-- Метрики -->
-<div class="grid4">
-  <div class="mc"><div class="mc-label">Итоговая оценка</div><div class="mc-val">8.6<span style="font-size:13px;color:var(--color-text-tertiary)">/10</span></div><div class="mc-sub">Survival Horror / Immersive Sim</div></div>
-  <div class="mc"><div class="mc-label">Точек сохранения</div><div class="mc-val">2</div><div class="mc-sub">До 40 минут потери прогресса при гибели</div></div>
-  <div class="mc"><div class="mc-label">Активных врагов</div><div class="mc-val">1 <span style="font-size:13px;color:var(--color-text-tertiary)">+ крысы</span></div><div class="mc-sub">Динамичный AI без заскриптованных паттернов</div></div>
-  <div class="mc"><div class="mc-label">Концовок</div><div class="mc-val">3</div><div class="mc-sub">Один бинарный моральный выбор в финале</div></div>
+<div class="g4">
+  <div class="mc"><div class="mc-l">Оценка</div><div class="mc-v">8.6<span style="font-size:13px;color:var(--color-text-tertiary)">/10</span></div><div class="mc-s">Survival Horror · Immersive Sim</div></div>
+  <div class="mc"><div class="mc-l">Активных врагов</div><div class="mc-v">1<span style="font-size:13px;color:var(--color-text-tertiary)"> + крысы</span></div><div class="mc-s">Динамичный AI без скриптов</div></div>
+  <div class="mc"><div class="mc-l">Точек сохранения</div><div class="mc-v">2</div><div class="mc-s">До 40 мин потери прогресса</div></div>
+  <div class="mc"><div class="mc-l">Концовок</div><div class="mc-v">3</div><div class="mc-s">Один бинарный выбор в финале</div></div>
 </div>
 
-<div class="grid2">
-  <!-- Оценки -->
+<div class="g3">
+  <div class="card" style="grid-column:1/3;">
+    <div class="clabel">Кривая напряжения по зонам</div>
+    <div style="position:relative;height:170px;"><canvas id="tc"></canvas></div>
+    <div class="legend">
+      <div class="li"><div class="dot" style="background:#D85A30;"></div>Давление Зверя</div>
+      <div class="li"><div class="dot" style="background:#378ADD;"></div>Дефицит ресурсов</div>
+      <div class="li"><div class="dot" style="background:#7F77DD;"></div>Сложность навигации</div>
+      <div class="li"><div class="dot" style="background:#1D9E75;"></div>Нарративная интенсивность</div>
+    </div>
+  </div>
   <div class="card">
-    <div class="sec-label">Оценки аспектов</div>
-    <div class="sr"><span class="sn">Звуковой дизайн</span><div class="sbw"><div class="sb" style="width:100%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">10</span></div>
-    <div class="sr"><span class="sn">Система генератора</span><div class="sbw"><div class="sb" style="width:100%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">10</span></div>
-    <div class="sr"><span class="sn">Динамо-фонарь</span><div class="sbw"><div class="sb" style="width:100%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">10</span></div>
-    <div class="sr"><span class="sn">AI Зверя</span><div class="sbw"><div class="sb" style="width:90%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">9</span></div>
-    <div class="sr"><span class="sn">Вариативность решений</span><div class="sbw"><div class="sb" style="width:90%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">9</span></div>
-    <div class="sr"><span class="sn">Система жетонов</span><div class="sbw"><div class="sb" style="width:90%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">9</span></div>
-    <div class="sr"><span class="sn">Атмосфера</span><div class="sbw"><div class="sb" style="width:90%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">9</span></div>
-    <div class="sr"><span class="sn">Система сохранений</span><div class="sbw"><div class="sb" style="width:90%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">9</span></div>
-    <div class="sr"><span class="sn">Нарратив</span><div class="sbw"><div class="sb" style="width:80%;background:#378ADD;"></div></div><span class="sv" style="color:#378ADD;">8</span></div>
-    <div class="sr"><span class="sn">Левел-дизайн</span><div class="sbw"><div class="sb" style="width:80%;background:#378ADD;"></div></div><span class="sv" style="color:#378ADD;">8</span></div>
-    <div class="sr"><span class="sn">Боевая система</span><div class="sbw"><div class="sb" style="width:70%;background:#BA7517;"></div></div><span class="sv" style="color:#BA7517;">7</span></div>
-    <div class="sr"><span class="sn">Концовки</span><div class="sbw"><div class="sb" style="width:70%;background:#BA7517;"></div></div><span class="sv" style="color:#BA7517;">7</span></div>
-    <div class="sr"><span class="sn">Баланс ресурсов</span><div class="sbw"><div class="sb" style="width:60%;background:#E24B4A;"></div></div><span class="sv" style="color:#E24B4A;">6</span></div>
-    <div class="sr"><span class="sn">Кривая сложности</span><div class="sbw"><div class="sb" style="width:90%;background:#1D9E75;"></div></div><span class="sv" style="color:#1D9E75;">9</span></div>
-  </div>
-
-  <div style="display:flex;flex-direction:column;gap:12px;">
-    <!-- Core loop -->
-    <div class="card">
-      <div class="sec-label">Core Loop</div>
-      <div class="ls"><div class="ln" style="background:#E1F5EE;color:#0F6E56;">1</div><div><div class="lt">Исследование</div><div class="ld">Перемещение по зонам, сбор информации и постоянный контроль уровня шума</div></div></div>
-      <div class="ls"><div class="ln" style="background:#E6F1FB;color:#185FA5;">2</div><div><div class="lt">Управление ресурсами</div><div class="ld">Топливо, патроны, аптечки — каждое действие требует решения: тратить или беречь</div></div></div>
-      <div class="ls"><div class="ln" style="background:#FAEEDA;color:#854F0B;">3</div><div><div class="lt">Преодоление препятствий</div><div class="ld">Несколько способов решения — каждый обходится ресурсами или создаёт шум</div></div></div>
-      <div class="ls"><div class="ln" style="background:#FCEBEB;color:#A32D2D;">4</div><div><div class="lt">Реакция на угрозу</div><div class="ld">Спрятаться, отогнать или отвлечь — любой выбор что-то стоит</div></div></div>
-      <div class="ls"><div class="ln" style="background:#EEEDFE;color:#534AB7;">5</div><div><div class="lt">Возврат к генератору</div><div class="ld">Топливо кончается → возвращаешься в хаб → заправляешь → сохраняешься → повтор</div></div></div>
-    </div>
-    <!-- Уязвимости -->
-    <div class="card">
-      <div class="sec-label">Уязвимости на каждом этапе</div>
-      <div class="vr"><span class="vt" style="background:#EAF3DE;color:#3B6D11;">Иссл.</span><span class="vx">Зарядка фонаря создаёт шум. Темнота сужает обзор и увеличивает тревогу</span></div>
-      <div class="vr"><span class="vt" style="background:#E6F1FB;color:#185FA5;">Сбор</span><span class="vx">Открытие ящиков — это звук. Игра не ставится на паузу: Зверь не ждёт</span></div>
-      <div class="vr"><span class="vt" style="background:#FAEEDA;color:#854F0B;">Решение</span><span class="vx">Выстрел в замок — громко. Граната — ещё громче. Тишина всегда дороже</span></div>
-      <div class="vr"><span class="vt" style="background:#FCEBEB;color:#A32D2D;">Угроза</span><span class="vx">Нехватка патронов превращает каждый выстрел в ставку. Бег притягивает Зверя</span></div>
-      <div class="vr"><span class="vt" style="background:#EEEDFE;color:#534AB7;">Возврат</span><span class="vx">Путь назад пролегает через зоны, куда Зверь мог уйти через норы</span></div>
+    <div class="clabel">Место в жанре</div>
+    <div style="position:relative;height:170px;"><canvas id="gc"></canvas></div>
+    <div class="legend">
+      <div class="li"><div class="dot" style="background:#D85A30;"></div>Amnesia TDD</div>
+      <div class="li"><div class="dot" style="background:#378ADD;"></div>Cry of Fear</div>
+      <div class="li"><div class="dot" style="background:#7F77DD;"></div>Alien: Isolation</div>
+      <div class="li"><div class="dot" style="background:#1D9E75;"></div>The Bunker</div>
     </div>
   </div>
 </div>
 
-<!-- График напряжения -->
-<div class="card-full">
-  <div class="sec-label" style="margin-bottom:.75rem;">Кривая напряжения по зонам</div>
-  <div style="position:relative;width:100%;height:180px;"><canvas id="tc"></canvas></div>
-  <div class="legend">
-    <div class="li"><div class="ld2" style="background:#D85A30;"></div>Давление Зверя</div>
-    <div class="li"><div class="ld2" style="background:#378ADD;"></div>Дефицит ресурсов</div>
-    <div class="li"><div class="ld2" style="background:#7F77DD;"></div>Сложность навигации</div>
-    <div class="li"><div class="ld2" style="background:#1D9E75;"></div>Нарративная интенсивность</div>
-  </div>
-</div>
-
-<!-- Зоны -->
-<div class="card-full">
-  <div class="sec-label" style="margin-bottom:.75rem;">Разбор по зонам</div>
-  <div class="ztabs">
-    <button class="zt active" onclick="sz('admin',this)">Администрация</button>
-    <button class="zt" onclick="sz('bar',this)">Казармы</button>
-    <button class="zt" onclick="sz('maint',this)">Техотсек</button>
-    <button class="zt" onclick="sz('prison',this)">Тюрьма</button>
-    <button class="zt" onclick="sz('arsenal',this)">Арсенал</button>
-    <button class="zt" onclick="sz('tunnels',this)">Туннели</button>
-  </div>
-  <div id="z-admin" class="zd active">
-    <div class="zm"><span class="zml">Активность Зверя</span><span class="zmv">Умеренная — паттерны движения ещё не знакомы</span></div>
-    <div class="zm"><span class="zml">Давление ресурсов</span><span class="zmv">Низкое — ошибки можно компенсировать</span></div>
-    <div class="zm"><span class="zml">Навигация</span><span class="zmv">Линейная с небольшими ответвлениями</span></div>
-    <div class="zm"><span class="zml">Тип заданий</span><span class="zmv">Одношаговые: найди → примени</span></div>
-    <div class="zm"><span class="zml">Цена гибели</span><span class="zmv">~15 минут</span></div>
-    <div class="zm"><span class="zml">Дизайнерская задача</span><span class="zmv">Ввести все системы без единой строки туториала</span></div>
-  </div>
-  <div id="z-bar" class="zd">
-    <div class="zm"><span class="zml">Активность Зверя</span><span class="zmv">Выше среднего — первые по-настоящему опасные столкновения</span></div>
-    <div class="zm"><span class="zml">Давление ресурсов</span><span class="zmv">Умеренное — ресурсы начинают ощущаться конечными</span></div>
-    <div class="zm"><span class="zml">Навигация</span><span class="zmv">Линейная с первым бэктрекингом</span></div>
-    <div class="zm"><span class="zml">Тип заданий</span><span class="zmv">Многошаговые и пик нарративной плотности</span></div>
-    <div class="zm"><span class="zml">Цена гибели</span><span class="zmv">~15–20 минут</span></div>
-    <div class="zm"><span class="zml">Дизайнерская задача</span><span class="zmv">Нарративное погружение в сочетании с усложнением структуры заданий</span></div>
-  </div>
-  <div id="z-maint" class="zd">
-    <div class="zm"><span class="zml">Активность Зверя</span><span class="zmv">Высокая — самая агрессивная зона в игре</span></div>
-    <div class="zm"><span class="zml">Давление ресурсов</span><span class="zmv">Среднее — дефицит даёт о себе знать</span></div>
-    <div class="zm"><span class="zml">Навигация</span><span class="zmv">Нелинейная, плотная — ключ открывает вентиляционные проходы</span></div>
-    <div class="zm"><span class="zml">Тип заданий</span><span class="zmv">Многошаговые с ретроактивными ключами</span></div>
-    <div class="zm"><span class="zml">Цена гибели</span><span class="zmv">25–35 минут</span></div>
-    <div class="zm"><span class="zml">Дизайнерская задача</span><span class="zmv">Максимальное навигационное давление и необходимость держать карту в голове</span></div>
-  </div>
-  <div id="z-prison" class="zd">
-    <div class="zm"><span class="zml">Активность Зверя</span><span class="zmv">Умеренная — атмосфера почти полной тишины</span></div>
-    <div class="zm"><span class="zml">Давление ресурсов</span><span class="zmv">Среднее</span></div>
-    <div class="zm"><span class="zml">Навигация</span><span class="zmv">Плотная — кусачки открывают проходы с цепными засовами</span></div>
-    <div class="zm"><span class="zml">Тип заданий</span><span class="zmv">Ретроактивный ключ и моральная дилемма</span></div>
-    <div class="zm"><span class="zml">Цена гибели</span><span class="zmv">25–30 минут</span></div>
-    <div class="zm"><span class="zml">Дизайнерская задача</span><span class="zmv">Эмоциональный контраст: тихий моральный выбор на фоне механик давления</span></div>
-  </div>
-  <div id="z-arsenal" class="zd">
-    <div class="zm"><span class="zml">Активность Зверя</span><span class="zmv">Высокая, ловушки на полу</span></div>
-    <div class="zm"><span class="zml">Давление ресурсов</span><span class="zmv">Высокое — острая нехватка, если не копил заранее</span></div>
-    <div class="zm"><span class="zml">Навигация</span><span class="zmv">Насыщена ловушками — каждый шаг требует внимания</span></div>
-    <div class="zm"><span class="zml">Тип заданий</span><span class="zmv">Финальная проверка навыков перед эмоциональным финалом</span></div>
-    <div class="zm"><span class="zml">Цена гибели</span><span class="zmv">30–40 минут</span></div>
-    <div class="zm"><span class="zml">Дизайнерская задача</span><span class="zmv">Испытание мастерства: спешка наказывается, внимательность вознаграждается</span></div>
-  </div>
-  <div id="z-tunnels" class="zd">
-    <div class="zm"><span class="zml">Активность Зверя</span><span class="zmv" style="color:#E24B4A;">Низкая — ни одной норы в зоне</span></div>
-    <div class="zm"><span class="zml">Давление ресурсов</span><span class="zmv">Низкое — запасы, как правило, уже накоплены</span></div>
-    <div class="zm"><span class="zml">Навигация</span><span class="zmv">Линейная — туман и размытые силуэты создают атмосферу</span></div>
-    <div class="zm"><span class="zml">Тип заданий</span><span class="zmv">Нарративная и эмоциональная кульминация</span></div>
-    <div class="zm"><span class="zml">Цена гибели</span><span class="zmv">10–15 минут</span></div>
-    <div class="zm"><span class="zml">Дизайнерская проблема</span><span class="zmv" style="color:#E24B4A;">Геймплейно проще середины игры — ощущение антиклимакса</span></div>
-  </div>
-</div>
-
-<!-- Негативная петля + жанр -->
-<div class="grid2">
-  <div class="card">
-    <div class="sec-label">Цикл эскалации ошибок</div>
-    <div class="neg-row"><span class="neg-arrow" style="color:#E24B4A;">→</span><span class="neg-text"><strong style="color:var(--color-text-primary);">Шум</strong> → Зверь активируется и начинает преследование</span></div>
-    <div class="neg-row"><span class="neg-arrow" style="color:#E24B4A;">→</span><span class="neg-text"><strong style="color:var(--color-text-primary);">Паника</strong> → стреляю → ещё больше шума</span></div>
-    <div class="neg-row"><span class="neg-arrow" style="color:#E24B4A;">→</span><span class="neg-text"><strong style="color:var(--color-text-primary);">Зверь разъярён</strong> → требуется 2 выстрела вместо одного</span></div>
-    <div class="neg-row"><span class="neg-arrow" style="color:#E24B4A;">→</span><span class="neg-text"><strong style="color:var(--color-text-primary);">Патроны на исходе</strong> → остаётся только бежать</span></div>
-    <div class="neg-row"><span class="neg-arrow" style="color:#E24B4A;">→</span><span class="neg-text"><strong style="color:var(--color-text-primary);">Бег порождает шум</strong> → Зверь активируется снова</span></div>
-    <div style="margin-top:10px;padding:8px 10px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);font-size:11px;color:var(--color-text-secondary);line-height:1.5;">Игра не позволяет вернуться в стабильное состояние. Каждая ошибка усиливает следующую — петля затягивается.</div>
-  </div>
-
-  <div class="card">
-    <div class="sec-label">Место в жанре</div>
-    <div style="position:relative;width:100%;height:180px;"><canvas id="gc"></canvas></div>
-    <div class="legend" style="margin-top:6px;">
-      <div class="li"><div class="ld2" style="background:#D85A30;"></div>Amnesia TDD</div>
-      <div class="li"><div class="ld2" style="background:#378ADD;"></div>Cry of Fear</div>
-      <div class="li"><div class="ld2" style="background:#7F77DD;"></div>Alien: Isolation</div>
-      <div class="li"><div class="ld2" style="background:#1D9E75;"></div>The Bunker</div>
-    </div>
-  </div>
-</div>
-
-<!-- Ключевые концовки -->
-<div class="card-full">
-  <div class="sec-label" style="margin-bottom:.75rem;">Ключевые выборы и концовки</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
-    <div style="padding:10px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);">
-      <div style="font-size:11px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;">Концовка 1 — Искупление</div>
-      <div style="font-size:11px;color:var(--color-text-secondary);line-height:1.5;">Убить Ламбера → взорвать леса → Анри вырывается на поверхность и попадает под немецкую атаку</div>
-    </div>
-    <div style="padding:10px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);">
-      <div style="font-size:11px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;">Концовка 2 — Побег</div>
-      <div style="font-size:11px;color:var(--color-text-secondary);line-height:1.5;">Сбежать, не убивая Ламбера → Анри и Зверь оба выбираются из пещеры</div>
-    </div>
-    <div style="padding:10px;background:var(--color-background-secondary);border-radius:var(--border-radius-md);">
-      <div style="font-size:11px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px;">Концовка 3 — Поглощение</div>
-      <div style="font-size:11px;color:var(--color-text-secondary);line-height:1.5;">Погибнуть от Зверя → душа Анри поглощается тенью из Amnesia: The Dark Descent</div>
-    </div>
-  </div>
+<div class="card">
+  <div class="clabel">Цена гибели и активность по зонам</div>
+  <div style="position:relative;height:150px;"><canvas id="bc"></canvas></div>
 </div>
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-function sz(id,btn){
-  document.querySelectorAll('.zd').forEach(d=>d.classList.remove('active'));
-  document.querySelectorAll('.zt').forEach(b=>b.classList.remove('active'));
-  document.getElementById('z-'+id).classList.add('active');
-  btn.classList.add('active');
-}
-
 const isDark=matchMedia('(prefers-color-scheme: dark)').matches;
-const gridC=isDark?'rgba(255,255,255,0.08)':'rgba(0,0,0,0.06)';
-const tickC=isDark?'rgba(255,255,255,0.4)':'rgba(0,0,0,0.4)';
+const gridC=isDark?'rgba(255,255,255,0.07)':'rgba(0,0,0,0.05)';
+const tickC=isDark?'rgba(255,255,255,0.38)':'rgba(0,0,0,0.38)';
+const zones=['Администрация','Казармы','Техотсек','Тюрьма','Арсенал','Туннели'];
 
 new Chart(document.getElementById('tc'),{
   type:'line',
-  data:{
-    labels:['Администрация','Казармы','Техотсек','Тюрьма','Арсенал','Туннели'],
-    datasets:[
-      {label:'Давление Зверя',data:[4,6,9,7,9,3],borderColor:'#D85A30',backgroundColor:'rgba(216,90,48,0.08)',tension:.4,pointRadius:4,pointBackgroundColor:'#D85A30',fill:false,borderWidth:2},
-      {label:'Дефицит ресурсов',data:[2,4,6,6,8,3],borderColor:'#378ADD',backgroundColor:'rgba(55,138,221,0.08)',tension:.4,pointRadius:4,pointBackgroundColor:'#378ADD',fill:false,borderWidth:2},
-      {label:'Сложность навигации',data:[3,5,9,7,8,3],borderColor:'#7F77DD',backgroundColor:'rgba(127,119,221,0.08)',tension:.4,pointRadius:4,pointBackgroundColor:'#7F77DD',fill:false,borderWidth:2},
-      {label:'Нарративная интенсивность',data:[4,9,5,7,4,8],borderColor:'#1D9E75',backgroundColor:'rgba(29,158,117,0.08)',tension:.4,pointRadius:4,pointBackgroundColor:'#1D9E75',fill:false,borderWidth:2}
-    ]
-  },
-  options:{
-    responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{display:false}},
-    scales:{
-      x:{grid:{color:gridC},ticks:{color:tickC,font:{size:10}}},
-      y:{min:0,max:10,grid:{color:gridC},ticks:{color:tickC,font:{size:10},stepSize:2}}
-    }
-  }
+  data:{labels:zones,datasets:[
+    {label:'Давление Зверя',data:[4,6,9,7,9,3],borderColor:'#D85A30',backgroundColor:'rgba(216,90,48,0.06)',tension:.4,pointRadius:3,pointBackgroundColor:'#D85A30',fill:true,borderWidth:2},
+    {label:'Дефицит ресурсов',data:[2,4,6,6,8,3],borderColor:'#378ADD',backgroundColor:'rgba(55,138,221,0.06)',tension:.4,pointRadius:3,pointBackgroundColor:'#378ADD',fill:true,borderWidth:2},
+    {label:'Сложность навигации',data:[3,5,9,7,8,3],borderColor:'#7F77DD',backgroundColor:'rgba(127,119,221,0.06)',tension:.4,pointRadius:3,pointBackgroundColor:'#7F77DD',fill:true,borderWidth:2},
+    {label:'Нарративная интенсивность',data:[4,9,5,7,4,8],borderColor:'#1D9E75',backgroundColor:'rgba(29,158,117,0.06)',tension:.4,pointRadius:3,pointBackgroundColor:'#1D9E75',fill:true,borderWidth:2}
+  ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{
+    x:{grid:{color:gridC},ticks:{color:tickC,font:{size:10}}},
+    y:{min:0,max:10,grid:{color:gridC},ticks:{color:tickC,font:{size:10},stepSize:2}}
+  }}
 });
 
 new Chart(document.getElementById('gc'),{
   type:'radar',
-  data:{
-    labels:['Психологизм','Системность','Вариативность','Боёвка','Ресурсы'],
-    datasets:[
-      {label:'Amnesia TDD',data:[10,3,1,0,3],borderColor:'#D85A30',backgroundColor:'rgba(216,90,48,0.1)',borderWidth:1.5,pointRadius:3,pointBackgroundColor:'#D85A30'},
-      {label:'Cry of Fear',data:[8,7,2,9,7],borderColor:'#378ADD',backgroundColor:'rgba(55,138,221,0.1)',borderWidth:1.5,pointRadius:3,pointBackgroundColor:'#378ADD'},
-      {label:'Alien: Isolation',data:[4,9,5,3,7],borderColor:'#7F77DD',backgroundColor:'rgba(127,119,221,0.1)',borderWidth:1.5,pointRadius:3,pointBackgroundColor:'#7F77DD'},
-      {label:'The Bunker',data:[6,10,9,3,5],borderColor:'#1D9E75',backgroundColor:'rgba(29,158,117,0.12)',borderWidth:2,pointRadius:3,pointBackgroundColor:'#1D9E75'}
-    ]
-  },
-  options:{
-    responsive:true,maintainAspectRatio:false,
-    plugins:{legend:{display:false}},
-    scales:{r:{min:0,max:10,grid:{color:gridC},angleLines:{color:gridC},pointLabels:{color:tickC,font:{size:10}},ticks:{display:false}}}
-  }
+  data:{labels:['Психологизм','Системность','Вариативность','Боёвка','Ресурсы'],datasets:[
+    {label:'Amnesia TDD',data:[10,3,1,0,3],borderColor:'#D85A30',backgroundColor:'rgba(216,90,48,0.1)',borderWidth:1.5,pointRadius:2,pointBackgroundColor:'#D85A30'},
+    {label:'Cry of Fear',data:[8,7,2,9,7],borderColor:'#378ADD',backgroundColor:'rgba(55,138,221,0.1)',borderWidth:1.5,pointRadius:2,pointBackgroundColor:'#378ADD'},
+    {label:'Alien: Isolation',data:[4,9,5,3,7],borderColor:'#7F77DD',backgroundColor:'rgba(127,119,221,0.1)',borderWidth:1.5,pointRadius:2,pointBackgroundColor:'#7F77DD'},
+    {label:'The Bunker',data:[6,10,9,3,5],borderColor:'#1D9E75',backgroundColor:'rgba(29,158,117,0.13)',borderWidth:2,pointRadius:2,pointBackgroundColor:'#1D9E75'}
+  ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{min:0,max:10,grid:{color:gridC},angleLines:{color:gridC},pointLabels:{color:tickC,font:{size:10}},ticks:{display:false}}}}
+});
+
+new Chart(document.getElementById('bc'),{
+  type:'bar',
+  data:{labels:zones,datasets:[
+    {label:'Цена гибели (мин)',data:[15,18,30,28,35,12],backgroundColor:'rgba(216,90,48,0.75)',borderRadius:4,borderSkipped:false},
+    {label:'Активность Зверя',data:[4,6,9,7,9,3],backgroundColor:'rgba(127,119,221,0.7)',borderRadius:4,borderSkipped:false}
+  ]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:tickC,font:{size:10},boxWidth:10,boxHeight:10}}},scales:{
+    x:{grid:{color:gridC},ticks:{color:tickC,font:{size:10}}},
+    y:{grid:{color:gridC},ticks:{color:tickC,font:{size:10}}}
+  }}
 });
 </script>
